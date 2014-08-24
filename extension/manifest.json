@@ -1,0 +1,37 @@
+{
+  "name": "Meteor spotting",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Spot meteors",
+  "homepage_url": "http://spotting.meteor.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*", "https://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "css": [
+        "css/animate.css",
+        "css/overlay.css"
+      ]
+    }
+  ],
+  "page_action" : {
+    "default_icon" : "icons/meteor.png",
+    "default_title" : "There's a <video> in this page!"
+  },
+  "web_accessible_resources": ["icons/meteor-discovered.png"]
+}

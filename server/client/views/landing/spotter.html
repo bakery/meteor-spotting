@@ -1,0 +1,15 @@
+<template name="spotter">
+	<li class="list-group-item">
+		{{#with user}}
+		<img src="{{profileImage}}" width="40" height="40">
+		<a target="_blank" href="http://twitter.com/{{screenName}}">{{screenName}}</a>
+		{{/with}}
+		<span class="badge">{{numberOfSpottings}}</span>
+		{{#if discoveries}}
+			<br><strong>Discovered: </strong>
+			{{#each discoveries}}
+				<a target="_blank" href="{{url}}">{{url}}</a>
+			{{/each}}
+		{{/if}}
+	</li>
+</template>

@@ -1,0 +1,9 @@
+<template name="explorerRegistration">
+	{{#if currentUser}}
+		{{> loginButtons}}
+	{{else}}
+		<h2>Set up your account</h2>
+		<p>it takes 2 clicks</p>
+		{{> loginButtons}}
+	{{/if}}
+</template>

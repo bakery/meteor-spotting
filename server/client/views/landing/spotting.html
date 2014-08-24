@@ -1,0 +1,8 @@
+<template name="spotting">
+	<li class="list-group-item">
+		<img src="http://g.etfv.co/{{url}}" width="20" height="20">
+		<span class="badge">{{count}}</span>
+		<a target="_blank" href="{{url}}">{{url}}</a>
+		{{#if newSpotting}}<span class="glyphicon glyphicon-star"></span>{{/if}}
+	</li>
+</template>

@@ -1,0 +1,33 @@
+<template name="landing">
+	<div class="jumbotron">
+	<h1>{{stats.spottingCount}} spottings {{stats.spotterCount}} spotters</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Top spottings</h2>
+			<ul class="list-group">
+				{{#each spottings}}
+					{{>spotting}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Top spotters</h2>
+			<ul class="list-group">
+				{{#each spotters}}
+					{{>spotter}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<a class="btn btn-primary btn-lg" href="https://chrome.google.com/webstore/detail/meteor-spotting/nhjijmaeejiignflcoiofkjfehggkddo" target="_blank">Start Playing</a>
+		</div>
+	</div>
+</template>
