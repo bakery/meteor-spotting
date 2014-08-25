@@ -3,10 +3,10 @@ var ApplicationSettings = {
     allowMultipleReports: true,
 
     //debug
-    // meteorSocketEndpoint: "ws://localhost:3000/websocket",
-    // explorerRegistrationUrl : 'http://localhost:3000/explorer/'
+    meteorSocketEndpoint: "ws://localhost:3000/websocket",
+    explorerRegistrationUrl : 'http://localhost:3000/explorer/'
 
     //production
-    meteorSocketEndpoint: "ws://spotting.meteor.com/websocket",
-    explorerRegistrationUrl : 'http://spotting.meteor.com/explorer/'
+    // meteorSocketEndpoint: "ws://spotting.meteor.com/websocket",
+    // explorerRegistrationUrl : 'http://spotting.meteor.com/explorer/'
 };

@@ -5,11 +5,18 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.8);
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-repeat: repeat-x;
     text-transform: uppercase;
     text-align: center;
     font-size: 4em;
+    color: white;
+}
+
+.meteorite {
+    z-index: 1001;
+    position: absolute;
+    top: 400px;
+    left: -400px;
+    width: 400px;
+    height: 186px;
 }

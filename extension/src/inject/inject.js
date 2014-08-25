@@ -28,17 +28,21 @@ var readyStateCheckInterval = setInterval(function() {
 
             var overlayDiv = document.createElement('div');
             var claimLink = document.createElement('a');
+            var meteorDiv = document.createElement('div');
             claimLink.setAttribute('href',response.claimUrl);
             claimLink.setAttribute('target','_blank');
             claimLink.innerHTML = 'Claim it!';
-            overlayDiv.setAttribute('class','meteor-overlay animated tada');
-            overlayDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/meteor-discovered.png") + ')';
+            meteorDiv.setAttribute('class', 'meteorite shoot-meteor');
+            meteorDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/meteorite.png") + ')';
+            overlayDiv.setAttribute('class','meteor-overlay animated fadeIn');
+            overlayDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/background.png") + ')';
             overlayDiv.addEventListener('click', function(){
                 document.body.removeChild(overlayDiv);
             });
-            overlayDiv.innerHTML = 'bam! you discovered a meteor';
+            overlayDiv.innerHTML = 'You discovered a meteor!';
             overlayDiv.appendChild(claimLink);
-            document.body.appendChild(overlayDiv); 
+            overlayDiv.appendChild(meteorDiv);
+            document.body.appendChild(overlayDiv);
         });
     }
 }, 10);
