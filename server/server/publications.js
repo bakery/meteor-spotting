@@ -1,3 +1,18 @@
+Meteor.publish('userData', function () {
+  if (this.userId) {
+    return Meteor.users.find({_id: this.userId},
+        {
+            fields: {
+                'services.twitter.screenName': 1,
+                'services.twitter.profile_image_url': 1
+            }
+        }
+    );
+  } else {
+    this.ready();
+  }
+});
+
 Meteor.publish('spottings', function(){
     return Spottings.find({},{
         sort : { spottingCount : -1 },

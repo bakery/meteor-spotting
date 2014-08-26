@@ -5,7 +5,8 @@ LandingController = RouteController.extend({
         return [
             Meteor.subscribe('spottings'),
             Meteor.subscribe('spotters'),
-            Meteor.subscribe('stats')
+            Meteor.subscribe('stats'),
+            Meteor.subscribe("userData")
         ];
     },
 
@@ -17,7 +18,8 @@ LandingController = RouteController.extend({
             spotters : Spotters.find({},{
                 sort : { spottingCount : -1 }
             }),
-            stats : Stats.findOne({})
+            stats : Stats.findOne({}),
+            currentUser : Meteor.user()
         };
     }
 
