@@ -2,5 +2,7 @@
 	{{#if currentUser}}
 		<img src="{{currentUser.services.twitter.profile_image_url}}">
 		<a href="/me">@{{currentUser.services.twitter.screenName}}</a>
+	{{else}}
+		{{> loginButtons}}
 	{{/if}}
 </template>
