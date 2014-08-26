@@ -39,6 +39,7 @@
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 60px;
 }
 .jumbotron .btn {
   padding: 14px 24px;
@@ -46,11 +47,10 @@
 }
 
 .jumbotron {
-
   padding: 20px !important;
 
-  h1 {
-    font-size: 32px;
+  h1, h2, p {
+    color: rgb(51, 51, 51);
   }
 }
 

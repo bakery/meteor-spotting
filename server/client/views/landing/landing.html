@@ -1,11 +1,28 @@
 <template name="landing">
 	<div class="jumbotron">
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Instructions</h2>
+				<p><strong>Step 1:</strong> Install the chrome extension.</p>
+				<p><strong>Step 2:</strong> Browse the web to spot Meteor projects.</p>
+				<p><strong>Step 3:</strong> Become the #1 Meteor spotter.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 center">
+			{{>installButton}}
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron">
 		<div class="row">
 			<div class="col-md-6">
-				<h1><i class="meteor"></i>{{stats.spottingCount}} spottings</h1>
+				<h2><i class="meteor"></i>{{stats.spottingCount}} spottings</h2>
 			</div>
 			<div class="col-md-6">
-				<h1><i class="fa fa-eye"></i>{{stats.spotterCount}} spotters</h1>
+				<h2><i class="fa fa-eye"></i>{{stats.spotterCount}} spotters</h2>
 			</div>
 		</div>
 	</div>
@@ -29,11 +46,4 @@
 		</div>
 	</div>
 
-	<div class="meteorite"></div>
-
-	<div class="row">
-		<div class="col-md-12 center">
-			{{>installButton}}
-		</div>
-	</div>
 </template>
