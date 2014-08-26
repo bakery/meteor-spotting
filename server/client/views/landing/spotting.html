@@ -8,6 +8,8 @@
             <a target="_blank" href="{{url}}">{{url}}</a>
         </div>
 		{{#if newSpotting}}<span class="glyphicon glyphicon-star"></span>{{/if}}
-        <p class="spotted-by">Last spotted by @johndoe</p>
+        {{#if lastSpottedBy}}
+        <p class="spotted-by">Last spotted by <a target="_blank" href="http://twitter.com/{{lastSpottedBy.screenName}}">@{{lastSpottedBy.screenName}}</a></p>
+        {{/if}}
 	</li>
 </template>
