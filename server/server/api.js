@@ -47,7 +47,8 @@ Meteor.methods({
 
 
         return {
-            newSpotting : newSpotting
+            newSpotting : newSpotting,
+            needsClaim : spotter ? (typeof spotter.user === 'undefined') : true
         };
     },
 
