@@ -53,7 +53,7 @@ var readyStateCheckInterval = setInterval(function() {
             meteorDiv.setAttribute('class', 'meteorite shoot-meteor');
             meteorDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/meteorite.png") + ')';
             overlayDiv.setAttribute('class','meteor-overlay animated fadeIn-n-Out');
-            overlayDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/background.png") + ')';
+            overlayDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/background.jpg") + ')';
             overlayDiv.addEventListener('click', function(){
                 document.body.removeChild(overlayDiv);
                 document.body.removeChild(claimLink);
