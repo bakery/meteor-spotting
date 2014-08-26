@@ -6,6 +6,7 @@
     right: 0;
     bottom: 0;
     background-repeat: repeat-x;
+    background-size: auto 120%;
     text-transform: uppercase;
     text-align: center;
     font-size: 4em;
