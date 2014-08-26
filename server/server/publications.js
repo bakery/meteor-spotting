@@ -15,7 +15,7 @@ Meteor.publish('userData', function () {
 
 Meteor.publish('spottings', function(){
     return Spottings.find({},{
-        sort : { spottingCount : -1 },
+        sort : { lastSpottedAt : -1 },
         limit : Meteor.settings.public.spottings.showTop
     });
 });
