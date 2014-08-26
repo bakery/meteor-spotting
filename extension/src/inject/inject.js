@@ -55,7 +55,7 @@ var readyStateCheckInterval = setInterval(function() {
             }
             else {
                 claimLink.style['background-image'] = 'url(' + chrome.extension.getURL("icons/unknown.png") + ')';
-                claimLink.setAttribute('href', "http://spotting.meteor.com");
+                claimLink.setAttribute('href',response.siteUrl);
             }
             
             document.body.appendChild(overlayDiv);

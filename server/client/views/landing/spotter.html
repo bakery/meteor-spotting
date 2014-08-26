@@ -6,7 +6,7 @@
 		<div class="spotter-detail">
 			<a target="_blank" href="http://twitter.com/{{user.screenName}}" class="handle">@{{user.screenName}}</a>
 			{{#if numberOfDiscoveries}}
-				<p class="discoveries">Discovered {{numberOfDiscoveries}} new meteors.</p>
+				<p class="discoveries">Discovered {{numberOfDiscoveries}} {{discoveryLabel numberOfDiscoveries}}</p>
 			{{/if}}
 		</div>
 		<span class="spot-badge">{{numberOfSpottings}}</span>

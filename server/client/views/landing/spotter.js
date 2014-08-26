@@ -17,5 +17,9 @@ Template.spotter.helpers({
         });
 
         return discoveries.length > 0 ? discoveries.length : null;
+    },
+
+    discoveryLabel : function(number){
+    	return number === 1 ? 'meteor' : 'meteors'
     }
 });

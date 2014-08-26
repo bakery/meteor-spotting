@@ -58,8 +58,21 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
                 return;
             }
 
+            function normalizeUrlProtocol(url){
+                // move everything to http
+                if(url.indexOf("https://") !== -1){
+                    url = url.replace("https://","http://");
+                }
+
+                if(url.indexOf("http://") === -1){
+                    url = ["http://",url].join('');
+                }
+
+                return url;
+            }
+
             var spotting = { 
-                url : message.from, 
+                url : normalizeUrlProtocol(message.from),
                 meta : message.meta,
                 spottedBy : Identity.getUserId()
             };
@@ -77,7 +90,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
                     sendResponse({ 
                         newSpotting : true,
                         needsClaim : res.needsClaim,
-                        claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId()
+                        claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId(),
+                        siteUrl : ApplicationSettings.siteUrl
                     });
                 }
 
