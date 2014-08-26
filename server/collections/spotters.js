@@ -14,6 +14,19 @@ Spotters = new Meteor.Collection('spotters',{
             type: [Object]
         },
 
+        'spottingCount' : {
+            type: Number,
+            autoValue: function() {
+                var spottings = this.field('spottings');
+                console.log('autovalue for',spottings);
+                if (spottings.isSet) {
+                    return spottings.value.length;
+                } else {
+                    this.unset();
+                }
+            }
+        },
+
         'spottings.$.url': {
             type : String,
             regEx : SimpleSchema.RegEx.Url

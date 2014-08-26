@@ -32,8 +32,10 @@ Meteor.methods({
         if(spotter){
             var spottings = spotter.spottings || [];
             if(!_.find(spottings, function(sp){ return sp.url === report.url; })){
+                spottings.push(spottingData);
+
                 Spotters.update(spotter._id,  {
-                    $push: { spottings: spottingData }
+                    $set: { spottings: spottings }
                 });
             }
         } else {

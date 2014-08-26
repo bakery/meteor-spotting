@@ -11,6 +11,9 @@ Meteor.publish('spotters', function(){
         user : {
             $exists : true
         }
+    },{
+        limit : Meteor.settings.public.spotters.showTop,
+        sort : { spottingCount : -1 }
     });
 });
 
