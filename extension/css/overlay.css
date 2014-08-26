@@ -1,5 +1,5 @@
 .meteor-overlay{
-    z-index: 1000;
+    z-index: 9900;
     position: absolute;
     left: 0;
     top: 0;
@@ -13,10 +13,26 @@
 }
 
 .meteorite {
-    z-index: 1001;
+    z-index: 9901;
     position: absolute;
     top: 400px;
     left: -400px;
     width: 400px;
     height: 186px;
+}
+
+.claim-it {
+    z-index: 9902;
+    display: block;
+    height: 117px;
+    width: 400px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    border: none;
+}
+
+.claim-it:hover {
+    background-color: transparent;
+    text-decoration: none;
 }

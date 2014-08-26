@@ -33,5 +33,5 @@
     "default_icon" : "icons/meteor.png",
     "default_title" : "There's a <video> in this page!"
   },
-  "web_accessible_resources": ["icons/meteor-discovered.png", "icons/background.png", "icons/meteorite.png"]
+  "web_accessible_resources": ["icons/meteor-discovered.png", "icons/background.png", "icons/meteorite.png", "icons/growl.png"]
 }
