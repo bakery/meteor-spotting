@@ -2,6 +2,21 @@ var readyStateCheckInterval = setInterval(function() {
     if (document.readyState === "complete") {
         clearInterval(readyStateCheckInterval);
 
+
+        var pageUrl = window.location.protocol + "//" + window.location.host;
+        var ignore = [
+            /localhost/ig,
+            /[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/ig
+        ];
+
+        for(var i=0; i<ignore.length; i++){
+            if(ignore[i].exec(pageUrl)){
+                console.log('ignoring',pageUrl);
+                return;
+            }
+        }
+
+
         var installationTag = document.createElement('div');
         installationTag.setAttribute('class','meteor-spotting-is-installed');
         installationTag.setAttribute('style','display:none;');
@@ -20,7 +35,7 @@ var readyStateCheckInterval = setInterval(function() {
         }
 
         chrome.runtime.sendMessage({
-            from: window.location.protocol + "//" + window.location.host,
+            from: pageUrl,
             meta: {
                 title: (document.querySelector("head > title") || {}).innerHTML
             },
