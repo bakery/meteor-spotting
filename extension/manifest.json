@@ -31,7 +31,7 @@
   ],
   "page_action" : {
     "default_icon" : "icons/meteor.png",
-    "default_title" : "There's a <video> in this page!"
+    "default_title" : "You've spotted a meteor!"
   },
   "web_accessible_resources": ["icons/background.jpg", "icons/meteorite.png", "icons/unknown.png", "icons/claim.png"]
 }
