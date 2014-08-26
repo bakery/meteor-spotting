@@ -1,6 +1,6 @@
 {
   "name": "Meteor spotting",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "manifest_version": 2,
   "description": "Spot meteors",
   "homepage_url": "http://spotting.meteor.com",
