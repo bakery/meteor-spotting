@@ -17,6 +17,12 @@ Spottings = new Meteor.Collection('spottings',{
             blackbox : true,
             optional : true
         },
+        lastSpottedAt : {
+            type: Date,
+            autoValue : function(){
+                return new Date();
+            }
+        },
         meta : {
             type : Object,
             blackbox : true
