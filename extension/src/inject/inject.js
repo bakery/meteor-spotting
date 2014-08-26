@@ -2,6 +2,11 @@ var readyStateCheckInterval = setInterval(function() {
     if (document.readyState === "complete") {
         clearInterval(readyStateCheckInterval);
 
+        var installationTag = document.createElement('div');
+        installationTag.setAttribute('class','meteor-spotting-is-installed');
+        installationTag.setAttribute('style','display:none;');
+        document.body.appendChild(installationTag);
+
         //scripts 
         var scripts = document.querySelectorAll("head > script") || [];
         var reportData = [];
