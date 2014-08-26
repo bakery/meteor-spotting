@@ -1,10 +1,8 @@
 <template name="explorerProfile">
 	{{#with profile}}
-	<h1>Hello, @{{user.screenName}}</h1>
-	<img src="{{user.profileImage}}">
 	<div class="row">
 		<div class="col-md-12">
-			<h2>Your spottings</h2>
+			<h2><img src="{{user.profileImage}}" class="profile-pic">Your spottings</h2>
 			<ul class="list-group">
 				{{#each spottings}}
 					{{>spotting}}

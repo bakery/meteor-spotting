@@ -2,24 +2,13 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {
-        "version": "0.8.2"
-      },
-      "scss": {
-        "version": "0.9.3"
-      },
-      "bourbon": {
-        "version": "3.1.8.1"
-      },
-      "bootstrap-3": {
-        "version": "3.2.0-1"
-      },
-      "collection2": {
-        "version": "0.4.6"
-      },
-      "collection-hooks": {
-        "version": "0.7.2"
-      }
+      "iron-router": {},
+      "scss": {},
+      "bourbon": {},
+      "bootstrap-3": {},
+      "collection2": {},
+      "collection-hooks": {},
+      "font-awesome": {}
     },
     "packages": {
       "iron-router": {
@@ -51,6 +40,11 @@
         "git": "https://github.com/matb33/meteor-collection-hooks.git",
         "tag": "v0.7.2",
         "commit": "261f61f07b371ae913463fba8964a9b93cab531b"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

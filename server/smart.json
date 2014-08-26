@@ -5,6 +5,7 @@
     "bourbon": {},
     "bootstrap-3": {},
     "collection2": {},
-    "collection-hooks": {}
+    "collection-hooks": {},
+    "font-awesome": {}
   }
 }

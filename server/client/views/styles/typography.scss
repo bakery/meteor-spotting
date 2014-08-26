@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arvo', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Holtwood One SC', serif;
+    letter-spacing: 1px;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}

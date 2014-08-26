@@ -1,0 +1,39 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('/images/background.png');
+  background-repeat: repeat-x;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  hr {
+    border: none;
+    width: 546px;
+    height: 30px;
+    background: {
+        image: url('/images/line.png');
+        repeat: no-repeat;
+        // position: 100% 0%;
+    }
+  }
+}
+
+i {
+    margin-right: 12px;
+
+    &.meteor {
+        display: inline-block;
+        vertical-align: middle; 
+        height: 29px;
+        width: 32px;
+        background-image: url('/images/meteor.png');
+    }
+}
