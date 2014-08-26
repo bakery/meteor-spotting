@@ -22,7 +22,7 @@ var readyStateCheckInterval = setInterval(function() {
         chrome.runtime.sendMessage({
             from: window.location.protocol + "//" + window.location.host,
             meta: {
-                title: document.querySelector("head > title").innerHTML
+                title: (document.querySelector("head > title") || {}).innerHTML
             },
             report: reportData
         }, function(response){
