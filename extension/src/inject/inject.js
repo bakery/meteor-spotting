@@ -2,10 +2,16 @@ var readyStateCheckInterval = setInterval(function() {
     if (document.readyState === "complete") {
         clearInterval(readyStateCheckInterval);
 
+        var installationTag = document.createElement('div');
+        installationTag.setAttribute('class','meteor-spotting-is-installed');
+        installationTag.setAttribute('style','display:none;');
+        document.body.appendChild(installationTag);
+
 
         var pageUrl = window.location.protocol + "//" + window.location.host;
         var ignore = [
             /localhost/ig,
+            /spotting\.meteor\.com/ig,
             /[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/ig
         ];
 
@@ -16,11 +22,6 @@ var readyStateCheckInterval = setInterval(function() {
             }
         }
 
-
-        var installationTag = document.createElement('div');
-        installationTag.setAttribute('class','meteor-spotting-is-installed');
-        installationTag.setAttribute('style','display:none;');
-        document.body.appendChild(installationTag);
 
         //scripts 
         var scripts = document.querySelectorAll("head > script") || [];
