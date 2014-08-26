@@ -11,8 +11,12 @@ LandingController = RouteController.extend({
 
     data: function () {
         return {
-            spottings : Spottings.find({}),
-            spotters : Spotters.find({}),
+            spottings : Spottings.find({},{
+                sort : { count : -1 }
+            }),
+            spotters : Spotters.find({},{
+                sort : { spottingCount : -1 }
+            }),
             stats : Stats.findOne({})
         };
     }

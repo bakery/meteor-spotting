@@ -21,14 +21,14 @@
     height: 186px;
 }
 
-.claim-it {
+.growl {
     z-index: 9902;
     display: block;
-    height: 117px;
-    width: 400px;
+    height: 118px;
+    width: 430px;
     position: fixed;
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
     border: none;
 }
 

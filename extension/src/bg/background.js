@@ -68,11 +68,15 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
                 if (err){ 
                     console.error(err);
                 } else {
+
+                    console.log('server response', res);
+
                     Archive.add(message.from);
                     showSpottingNoification(res.newSpotting);
 
                     sendResponse({ 
                         newSpotting : true,
+                        needsClaim : res.needsClaim,
                         claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId()
                     });
                 }

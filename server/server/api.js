@@ -15,13 +15,24 @@ Meteor.methods({
         var newSpotting = false;
 
         if(spotting){
-            Spottings.update(spotting._id, { $inc: { count: 1 } });
+            var modifier = { 
+                $inc: { count: 1 } 
+            };
+
+            if(spotter && spotter.user){
+                modifier.$set = {
+                    lastSpottedBy : spotter.user
+                };
+            }
+
+            Spottings.update(spotting._id, modifier);
         } else {
             newSpotting = true;
             Spottings.insert({
                 url : url,
                 meta : report.meta,
-                spottedBy : report.spottedBy
+                spottedBy : report.spottedBy,
+                lastSpottedBy : spotter ? spotter.user : null
             });
         }
 
@@ -32,8 +43,10 @@ Meteor.methods({
         if(spotter){
             var spottings = spotter.spottings || [];
             if(!_.find(spottings, function(sp){ return sp.url === report.url; })){
+                spottings.push(spottingData);
+
                 Spotters.update(spotter._id,  {
-                    $push: { spottings: spottingData }
+                    $set: { spottings: spottings }
                 });
             }
         } else {
@@ -47,7 +60,8 @@ Meteor.methods({
 
 
         return {
-            newSpotting : newSpotting
+            newSpotting : newSpotting,
+            needsClaim : spotter ? (typeof spotter.user === 'undefined') : true
         };
     },
 

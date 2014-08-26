@@ -12,6 +12,11 @@ Spottings = new Meteor.Collection('spottings',{
         spottedBy : {
             type : String
         },
+        lastSpottedBy : {
+            type : Object,
+            blackbox : true,
+            optional : true
+        },
         meta : {
             type : Object,
             blackbox : true
