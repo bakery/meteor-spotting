@@ -1,5 +1,8 @@
 Meteor.publish('spottings', function(){
-    return Spottings.find({});
+    return Spottings.find({},{
+        sort : { spottingCount : -1 },
+        limit : Meteor.settings.public.spottings.showTop
+    });
 });
 
 Meteor.publish('stats', function(){
