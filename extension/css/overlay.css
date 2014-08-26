@@ -1,5 +1,5 @@
 .meteor-overlay{
-    z-index: 9900;
+    z-index: 99900;
     position: fixed;
     left: 0;
     top: 0;
@@ -14,7 +14,7 @@
 }
 
 .meteorite {
-    z-index: 9901;
+    z-index: 99901;
     position: absolute;
     top: 400px;
     left: -400px;
@@ -23,7 +23,7 @@
 }
 
 .growl {
-    z-index: 9902;
+    z-index: 99902;
     display: block;
     height: 118px;
     width: 430px;
