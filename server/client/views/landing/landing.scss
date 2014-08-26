@@ -167,3 +167,19 @@
     top: 200px;
   }
 }
+
+.profile-link {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  img {
+    border-radius: 32px;
+    height: 32px;
+  }
+
+  a {
+    font-size: 16px;
+    color: white;
+    margin-left: 10px;
+  }
+}
