@@ -90,7 +90,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
                     sendResponse({ 
                         newSpotting : true,
                         needsClaim : res.needsClaim,
-                        claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId()
+                        claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId(),
+                        siteUrl : ApplicationSettings.siteUrl
                     });
                 }
 
