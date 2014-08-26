@@ -4,6 +4,7 @@ body {
   padding-bottom: 20px;
   background-image: url('/images/background.jpg');
   background-repeat: repeat-x;
+  background-color: #304b80;
 }
 
 .title {
@@ -36,4 +37,17 @@ i {
         width: 32px;
         background-image: url('/images/meteor.png');
     }
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+
+  a, a:hover {
+    color: white;
+  }
+
+  a:hover {
+    text-shadow: 0 0 15px #fff;
+  }
 }

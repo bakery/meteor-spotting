@@ -181,5 +181,9 @@
     font-size: 16px;
     color: white;
     margin-left: 10px;
+
+    &:hover {
+      text-shadow: 0 0 15px #fff;
+    }
   }
 }
