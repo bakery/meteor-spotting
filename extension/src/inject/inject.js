@@ -33,26 +33,33 @@ var readyStateCheckInterval = setInterval(function() {
 
             var overlayDiv = document.createElement('div');
             var meteorDiv = document.createElement('div');
-        
+
+
             meteorDiv.setAttribute('class', 'meteorite shoot-meteor');
             meteorDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/meteorite.png") + ')';
-            overlayDiv.setAttribute('class','meteor-overlay animated fadeIn');
+            overlayDiv.setAttribute('class','meteor-overlay animated fadeIn-n-Out');
             overlayDiv.style['background-image'] = 'url(' + chrome.extension.getURL("icons/background.png") + ')';
             overlayDiv.addEventListener('click', function(){
                 document.body.removeChild(overlayDiv);
+                document.body.removeChild(claimLink);
             });
-            overlayDiv.innerHTML = 'You discovered a meteor!';
+
             overlayDiv.appendChild(meteorDiv);
             
+            var claimLink = document.createElement('a');
+            claimLink.setAttribute('target','_blank');
+            claimLink.setAttribute('class', 'growl wait-n-fadeIn');
             if(response.needsClaim){
-                var claimLink = document.createElement('a');
+                claimLink.style['background-image'] = 'url(' + chrome.extension.getURL("icons/claim.png") + ')';
                 claimLink.setAttribute('href',response.claimUrl);
-                claimLink.setAttribute('target','_blank');
-                claimLink.innerHTML = 'Claim it!';
-                overlayDiv.appendChild(claimLink);
+            }
+            else {
+                claimLink.style['background-image'] = 'url(' + chrome.extension.getURL("icons/unknown.png") + ')';
+                claimLink.setAttribute('href', "http://spotting.meteor.com");
             }
             
             document.body.appendChild(overlayDiv);
+            document.body.appendChild(claimLink);
         });
     }
 }, 10);
