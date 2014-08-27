@@ -2,7 +2,7 @@
   "name": "Meteor spotting",
   "version": "0.0.4",
   "manifest_version": 2,
-  "description": "Spot meteors",
+  "description": "Discover and spot web applications running Meteorjs. Collect your discoveries and compete with other explorers.",
   "homepage_url": "http://spotting.meteor.com",
   "icons": {
     "16": "icons/icon16.png",

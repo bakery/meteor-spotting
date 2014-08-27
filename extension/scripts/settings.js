@@ -1,6 +1,7 @@
 var ApplicationSettings = {
     // keep this true for debugging
-    allowMultipleReports: true,
+    allowMultipleReports: false,
+    alwaysNewSpotting: true,
 
     //debug
     meteorSocketEndpoint: "ws://localhost:3000/websocket",
