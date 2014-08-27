@@ -2,13 +2,30 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {},
-      "scss": {},
-      "bourbon": {},
-      "bootstrap-3": {},
-      "collection2": {},
-      "collection-hooks": {},
-      "font-awesome": {}
+      "iron-router": {
+        "version": "0.8.2"
+      },
+      "scss": {
+        "version": "0.9.4"
+      },
+      "bourbon": {
+        "version": "3.1.8.1"
+      },
+      "bootstrap-3": {
+        "version": "3.2.0-1"
+      },
+      "collection2": {
+        "version": "0.4.6"
+      },
+      "collection-hooks": {
+        "version": "0.7.2"
+      },
+      "font-awesome": {
+        "version": "4.1.0"
+      },
+      "fast-render": {
+        "version": "1.0.0"
+      }
     },
     "packages": {
       "iron-router": {
@@ -18,8 +35,8 @@
       },
       "scss": {
         "git": "https://github.com/fourseven/meteor-scss.git",
-        "tag": "v0.9.3",
-        "commit": "185f3b2787fb85e653f7b7bf603d1493ed14943d"
+        "tag": "v0.9.4",
+        "commit": "b5ebfe2bb8a58a03966b6f49e185544a0233ddb0"
       },
       "bourbon": {
         "git": "https://github.com/chicagogrooves/meteor-bourbon.git",
@@ -45,6 +62,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v1.0.0",
+        "commit": "acbc04982025fe78cebb8865b5a04689741d4b0b"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

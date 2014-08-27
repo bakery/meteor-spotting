@@ -1,5 +1,6 @@
 ExplorerProfile = RouteController.extend({
     template: 'explorerProfile',
+    fastRender: true,
 
     waitOn: function () {
         return [

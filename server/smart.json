@@ -6,6 +6,7 @@
     "bootstrap-3": {},
     "collection2": {},
     "collection-hooks": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "fast-render": {}
   }
 }
