@@ -1,0 +1,1 @@
+![Meteor Spotting](https://dl.dropboxusercontent.com/u/9224326/meteor-spotting.png)
