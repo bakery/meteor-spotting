@@ -1,7 +1,6 @@
-LandingController = RouteController.extend({
+LandingController = FastRender.RouteController.extend({
     template: 'landing',
-    fastRender: true,
-
+    
     waitOn: function () {
         return [
             Meteor.subscribe('spottings'),
