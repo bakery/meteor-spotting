@@ -1,7 +1,10 @@
 <template name="profileLink">
 	{{#if currentUser}}
 		<img src="{{currentUser.services.twitter.profile_image_url}}">
-		<a href="/me">@{{currentUser.services.twitter.screenName}}</a>
+        <div class="stats">
+            <p><a href="/me">@{{currentUser.services.twitter.screenName}}</a></p>
+            <p><a href="/me">{{numberOfSpottings}} spottings</a></p>
+        </div>
 	{{else}}
 		{{> loginButtons}}
 	{{/if}}

@@ -181,18 +181,26 @@ h1 {
   padding-right: 15px;
   padding-left: 15px;
 
+  .stats, img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   img {
     border-radius: 32px;
-    height: 32px;
+    height: 36px;
+    margin-right: 5px;
   }
 
   a {
-    font-size: 16px;
     color: white;
-    margin-left: 10px;
 
     &:hover {
       text-shadow: 0 0 15px #fff;
     }
+  }
+
+  p {
+    margin-bottom: 0px;
   }
 }
