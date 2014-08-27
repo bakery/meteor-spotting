@@ -88,14 +88,14 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
                     showSpottingNoification(res.newSpotting);
 
                     sendResponse({ 
-                        newSpotting : true,
+                        newSpotting : res.newSpotting || ApplicationSettings.alwaysNewSpotting,
                         needsClaim : res.needsClaim,
                         claimUrl : ApplicationSettings.explorerRegistrationUrl + Identity.getUserId(),
                         siteUrl : ApplicationSettings.siteUrl
                     });
                 }
 
-                console.log(res);    
+                console.log(res);
             });
         } 
     }
