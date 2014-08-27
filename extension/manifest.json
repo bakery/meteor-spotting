@@ -1,6 +1,6 @@
 {
   "name": "Meteor spotting",
-  "version": "0.0.5",
+  "version": "0.6",
   "manifest_version": 2,
   "description": "Discover and spot web applications running Meteorjs. Collect your discoveries and compete with other explorers.",
   "homepage_url": "http://spotting.meteor.com",
