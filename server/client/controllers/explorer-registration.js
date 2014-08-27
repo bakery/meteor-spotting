@@ -1,20 +1,7 @@
 ExplorerRegistration = RouteController.extend({
     template: 'explorerRegistration',
-
-    // waitOn: function () {
-    //     return [
-           
-    //     ];
-    // },
-
-    // onBeforeAction : function(){
-    //     console.log()
-
-    //     if(Meteor.user()){
-    //         Router.go('/me');
-    //     }
-    // },
-
+    fastRender: true,
+    
     data: function () {
 
         var controller = this;

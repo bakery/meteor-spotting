@@ -1,12 +1,13 @@
 LandingController = RouteController.extend({
     template: 'landing',
+    fastRender: true,
 
     waitOn: function () {
         return [
             Meteor.subscribe('spottings'),
             Meteor.subscribe('spotters'),
             Meteor.subscribe('stats'),
-            Meteor.subscribe("userData")
+            Meteor.subscribe('userData')
         ];
     },
 
@@ -22,8 +23,4 @@ LandingController = RouteController.extend({
             currentUser : Meteor.user()
         };
     }
-
-    // action: function () {
-    //  if we want to override default behavior 
-    // }
 });

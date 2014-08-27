@@ -7,9 +7,12 @@
 		<div class="url">
             <a target="_blank" href="{{url}}">{{url}}</a>
         </div>
-		{{#if newSpotting}}<span class="glyphicon glyphicon-star"></span>{{/if}}
-        {{#if lastSpottedBy}}
-        <p class="spotted-by">Last spotted by <a target="_blank" href="http://twitter.com/{{lastSpottedBy.screenName}}">@{{lastSpottedBy.screenName}}</a></p>
+		{{#if newSpotting}}
+            <p class="spotted-by">Discovered by you!</p>
+        {{else}}
+            {{#if lastSpottedBy}}
+            <p class="spotted-by">Last spotted by <a target="_blank" href="http://twitter.com/{{lastSpottedBy.screenName}}">@{{lastSpottedBy.screenName}}</a></p>
+            {{/if}}
         {{/if}}
 	</li>
 </template>
