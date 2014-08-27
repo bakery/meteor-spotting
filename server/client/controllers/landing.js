@@ -7,7 +7,7 @@ LandingController = RouteController.extend({
             Meteor.subscribe('spottings'),
             Meteor.subscribe('spotters'),
             Meteor.subscribe('stats'),
-            Meteor.subscribe("userData")
+            Meteor.subscribe('userData')
         ];
     },
 
