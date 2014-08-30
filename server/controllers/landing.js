@@ -1,5 +1,6 @@
-LandingController = FastRender.RouteController.extend({
+LandingController = RouteController.extend({
     template: 'landing',
+    fastRender: true,
     
     waitOn: function () {
         return [

@@ -1,6 +1,7 @@
-ExplorerRegistration = FastRender.RouteController.extend({
+ExplorerRegistration = RouteController.extend({
     template: 'explorerRegistration',
-    
+    fastRender: true,
+
     data: function () {
 
         var controller = this;
