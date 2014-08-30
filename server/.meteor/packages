@@ -4,13 +4,12 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-iron-router
-scss
-bourbon
-bootstrap-3
-collection2
-collection-hooks
+iron:router
+fourseven:scss
+mizzao:bootstrap-3
+aldeed:collection2
+matb33:collection-hooks
 accounts-twitter
 accounts-ui
-font-awesome
-fast-render
+natestrauser:font-awesome
+meteorhacks:fast-render

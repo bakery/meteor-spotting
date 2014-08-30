@@ -3,3 +3,4 @@
 .sass-cache/*
 settings.json
 production.json
+test.json

@@ -1,12 +1,3 @@
 {
-  "packages": {
-    "iron-router": {},
-    "scss": {},
-    "bourbon": {},
-    "bootstrap-3": {},
-    "collection2": {},
-    "collection-hooks": {},
-    "font-awesome": {},
-    "fast-render": {}
-  }
+  "meteor": {}
 }
