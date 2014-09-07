@@ -18,5 +18,3 @@ Router.map(function () {
     controller: 'ExplorerProfile'
   });
 });
-
-Router.onBeforeAction('loading');
