@@ -20,6 +20,10 @@ Meteor.publish('spottings', function(){
     });
 });
 
+Meteor.publish('recent-discoveries', function(){
+    return SpottingsHelper.getRecentDisoveries();
+});
+
 Meteor.publish('stats', function(){
     return Stats.find({});
 });

@@ -4,7 +4,7 @@ LandingController = RouteController.extend({
     
     waitOn: function () {
         return [
-            Meteor.subscribe('spottings'),
+            Meteor.subscribe('recent-discoveries'),
             Meteor.subscribe('spotters'),
             Meteor.subscribe('stats'),
             Meteor.subscribe('userData')
@@ -13,9 +13,7 @@ LandingController = RouteController.extend({
 
     data: function () {
         return {
-            spottings : Spottings.find({},{
-                sort : { lastSpottedAt : -1 }
-            }),
+            spottings : SpottingsHelper.getRecentDisoveries(),
             spotters : Spotters.find({},{
                 sort : { spottingCount : -1 }
             }),

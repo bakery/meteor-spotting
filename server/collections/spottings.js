@@ -1,3 +1,12 @@
+SpottingsHelper = {
+    getRecentDisoveries : function(){
+        return Spottings.find({},{
+            sort : { reported : -1 },
+            limit : Meteor.settings.public.spottings.showTop
+        });
+    }
+};
+
 Spottings = new Meteor.Collection('spottings',{
     schema : new SimpleSchema({
         url : {
