@@ -1,18 +1,20 @@
 <template name="spotting">
 	<li class="list-group-item spotting">
-		<img src="http://g.etfv.co/{{url}}" width="20" height="20">
-		{{#if count}}
+		<img src="/images/meteor.png" width="16" height="15">
+        {{#if count}}
             <span class="spot-badge">{{count}}</span>
         {{/if}}
 		<div class="url">
             <a target="_blank" href="{{url}}">{{url}}</a>
         </div>
+        <p class="spotted-by">
 		{{#if newSpotting}}
-            <p class="spotted-by">Discovered by you!</p>
+            Discovered by you!
         {{else}}
             {{#if lastSpottedBy}}
-            <p class="spotted-by">Last spotted by <a target="_blank" href="http://twitter.com/{{lastSpottedBy.screenName}}">@{{lastSpottedBy.screenName}}</a></p>
+            Last spotted by <a target="_blank" href="http://twitter.com/{{lastSpottedBy.screenName}}">@{{lastSpottedBy.screenName}}</a>
             {{/if}}
         {{/if}}
+        </p>
 	</li>
 </template>
